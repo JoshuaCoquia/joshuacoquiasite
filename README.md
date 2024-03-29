@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# Joshua Coquia's Site
 
 ```sh
 npm create astro@latest -- --template minimal
