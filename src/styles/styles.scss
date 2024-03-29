@@ -1,24 +1,24 @@
 @use 'variables';
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url(/fonts/Montserrat-VariableFont_wght.ttf);
-    font-weight: bold;
-    font-style: normal;
     font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    src: url(/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: 'Noto-Sans';
-    src: url(/fonts/NotoSans-VariableFont_wdth,wght.ttf);
-    font-weight: normal;
-    font-style: normal;
     font-display: swap;
+    font-family: 'Noto-Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/NotoSans-VariableFont_wdth,wght.ttf);
 }
 
 html {
-    font-size: 16px;
     background-color: variables.$background;
+    font-size: 16px;
 }
 
 h1, h2, h3 {
@@ -37,21 +37,35 @@ h3 {
     font-size: 1.5rem;
 }
 
+a {
+    color: variables.$accent;
+}
+
 main {
-    margin: 3rem 17.5rem;
-
-    section {
+    margin: 3rem auto;
+    width: 60%;
+    > section {
         padding: 1.5rem 0;
-
-        * {
+        p, ol, ul {
             margin: 1rem auto;
+        }
+        h2, h3 {
+            margin-top: 2rem;
         }
     }
 }
 
+ol, ul {
+    list-style-position: inside;
+}
+
 * {
+    color: variables.$text;
+    font-family: Noto-Sans, Calibri, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Noto-Sans, Calibri, sans-serif;
-    color: variables.$text;
+    ::selection {
+        background-color: variables.$accent;
+        color: variables.$text;
+    }
 }
