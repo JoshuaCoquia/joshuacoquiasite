@@ -21,7 +21,11 @@ html {
     font-size: 16px;
 }
 
-
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 h1, h2, h3 {
    font-family: 'Montserrat', cursive; 
