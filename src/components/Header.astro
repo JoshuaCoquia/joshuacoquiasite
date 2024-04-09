@@ -16,18 +16,20 @@
 <style lang="scss">
 @use '@styles/variables';
 header {
-    padding: 1rem 2.5rem;
+    align-items: center;
+    box-shadow: 0 2px 8px variables.$text;
     color: variables.$text;
     display: grid;
+    font-family: "Montserrat";
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    padding: 1rem 0 1rem 2.5rem;
     nav {
         ul {
             float: right;
             list-style: none;
             li {
-                float: left;
                 display: inline;
+                float: left;
                 text-decoration: none;
             }
         }
@@ -38,14 +40,17 @@ header {
     }
     .title {
         font-size: 2rem;
+        font-weight: bold;
     }
     a {
-        display: block;
-        text-decoration: none;
-        font-size: 1.5rem;
         color: variables.$text;
+        display: block;
+        font-size: 1.5rem;
+        padding: 8px;
+        border-radius: 16px;
+        text-decoration: none;
         &:hover {
-            color: variables.$accent;
+            background-color: variables.$accent;
         }
     }
 }
