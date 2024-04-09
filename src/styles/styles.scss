@@ -22,9 +22,9 @@ html {
 }
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -51,7 +51,7 @@ main {
     margin: 3rem auto;
     width: 65%;
     > section {
-        padding: 1.5rem 0;
+        padding: 3rem 0;
         p, ol, ul {
             margin: 1rem auto;
         }
