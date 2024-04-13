@@ -12,12 +12,19 @@
         </nav>
     </section>
 </header>
-
+<script>
+    console.log("Hello, world!");
+    const header = document.querySelector("header")!;
+    const observer = new IntersectionObserver(([entry]) => {
+       header.classList.toggle("shadow", !entry?.isIntersecting); 
+       console.log("toggle shadow");
+    });
+    observer.observe(header);
+</script>
 <style lang="scss">
 @use '@styles/variables';
 header {
     align-items: center;
-    box-shadow: 0 2px 8px variables.$text;
     color: variables.$text;
     display: grid;
     font-family: "Montserrat";
@@ -55,5 +62,10 @@ header {
             background-color: variables.$accent;
         }
     }
+    &.shadow {
+        background-color: variables.$background;
+        box-shadow: 0 2px 8px variables.$text;
+    }
 }
+
 </style>
