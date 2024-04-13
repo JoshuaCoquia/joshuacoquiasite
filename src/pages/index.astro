@@ -2,15 +2,32 @@
 import Layout from "@layouts/Layout.astro";
 ---
 <Layout title="Joshua Coquia's Space">
-    <section id="hero" class="standard">
-        <h1>Joshua Coquia</h1>
-        <p>A lifelong learner mastering Web Development.</p>
+    <section id="hero" class="twoColumns">
+        <section id="heroLeft">
+            <h1>Joshua Coquia</h1>
+            <p>A lifelong learner mastering Web Development and speedcubing.</p>
+        </section>
+        <section id="heroRight">
+        </section>
     </section>
 </Layout>
 
 <style lang="scss">
     @use '@styles/variables';
     #hero {
-        text-align: center;
+        h1 {
+            font-size: 5rem;
+        }
+        padding: 3rem 5rem;
+        #heroRight {
+            background-color: variables.$background;
+            background-image: url("/images/Hero Element Background.PNG");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            aspect-ratio: 16/9;
+        }
+        min-height: 100vh;
     }
 </style>
