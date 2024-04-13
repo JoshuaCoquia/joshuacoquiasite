@@ -6,9 +6,16 @@ import Layout from "@layouts/Layout.astro";
         <section id="heroLeft">
             <h1>Joshua Coquia</h1>
             <p>A lifelong learner mastering Web Development and speedcubing.</p>
+            <p>
+                <a href="/about">About Me</a>
+            </p>
         </section>
         <section id="heroRight">
+            <img src="/images/Hero Element Background.PNG" alt="Joshua Coquia solving a Rubik's Cube.">
         </section>
+    </section>
+    <section class="standard">
+        <p>Welcome to my website! In this website, I write about topics I'm passionate about.</p>
     </section>
 </Layout>
 
@@ -18,16 +25,12 @@ import Layout from "@layouts/Layout.astro";
         h1 {
             font-size: 5rem;
         }
-        padding: 3rem 5rem;
-        #heroRight {
+        padding: 6em 5rem;
+        #heroRight img {
             background-color: variables.$background;
-            background-image: url("/images/Hero Element Background.PNG");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
             width: 100%;
             aspect-ratio: 16/9;
         }
-        min-height: 100vh;
+        min-height: 75vh;
     }
 </style>

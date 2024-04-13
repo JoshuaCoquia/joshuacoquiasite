@@ -1,13 +1,13 @@
 <header>
     <section>
-    <p class="title">Joshua Coquia's Space</p>
+    <a href="/" class="title">Joshua Coquia's Space</a>
     </section>
     <section>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/articles">Articles</a></li>
+                <li><a href="/links">Links</a></li>
             </ul>
         </nav>
     </section>
@@ -57,18 +57,20 @@ header {
         }
     }
     .title {
+        color: variables.$text;
         font-size: 2rem;
         font-weight: bold;
     }
     a {
         color: variables.$text;
-        display: block;
         font-size: 1.5rem;
         padding: 8px;
         border-radius: 16px;
         text-decoration: none;
-        &:hover {
-            background-color: variables.$accent;
+        &:not(.title) {
+            &:focus, &:hover  {
+                background-color: variables.$accent;
+            }
         }
     }
     &.shadow {
